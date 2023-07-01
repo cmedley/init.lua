@@ -3,7 +3,7 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-require 'colorizer'.setup()
+--require 'colorizer'.setup()
 
 return require('packer').startup(function(use)
   -- Packer can manage itself
@@ -21,6 +21,8 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
   use('mhinz/vim-mix-format')
+  use('tpope/vim-liquid')
+  use('github/copilot.vim')
 
   use {
 	  'VonHeikemen/lsp-zero.nvim',
@@ -46,14 +48,38 @@ return require('packer').startup(function(use)
 
   use({'vim-test/vim-test'})
 
-  use('NvChad/nvim-colorizer.lua')
+ -- use('NvChad/nvim-colorizer.lua')
 
-  use({
-	  'lunarvim/darkplus.nvim',
-	  as = 'darkplus',
-	  config = function()
-		  vim.cmd('colorscheme darkplus')
-	  end
+ -- use({
+ --     'lunarvim/darkplus.nvim',
+ --     as = 'darkplus',
+ --     config = function()
+ --   	  vim.cmd('colorscheme darkplus')
+ --     end
+ -- })
+
+ use({
+      'rose-pine/neovim',
+      as = 'rose-pine',
+      config = function()
+    	  vim.cmd('colorscheme rose-pine')
+      end
   })
+
+ --use({
+ --     'projekt0n/github-nvim-theme',
+ --     config = function()
+ --   	  vim.cmd('colorscheme github_dark_dimmed')
+ --     end
+ -- })
+
+ use('APZelos/blamer.nvim')
+
+ use {"ellisonleao/glow.nvim", config = function() require("glow").setup() end}
+
+use('tpope/vim-projectionist')
+use('c-brenn/fuzzy-projectionist.vim')
+use('andyl/vim-projectionist-elixir')
+
 
 end)

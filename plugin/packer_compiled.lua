@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["blamer.nvim"] = {
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/blamer.nvim",
+    url = "https://github.com/APZelos/blamer.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -104,16 +109,26 @@ _G.packer_plugins = {
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  darkplus = {
-    config = { "\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme darkplus\bcmd\bvim\0" },
+  ["copilot.vim"] = {
     loaded = true,
-    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/darkplus",
-    url = "https://github.com/lunarvim/darkplus.nvim"
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/copilot.vim",
+    url = "https://github.com/github/copilot.vim"
   },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
+  },
+  ["fuzzy-projectionist.vim"] = {
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/fuzzy-projectionist.vim",
+    url = "https://github.com/c-brenn/fuzzy-projectionist.vim"
+  },
+  ["glow.nvim"] = {
+    config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0" },
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/glow.nvim",
+    url = "https://github.com/ellisonleao/glow.nvim"
   },
   harpoon = {
     loaded = true,
@@ -140,11 +155,6 @@ _G.packer_plugins = {
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
-  ["nvim-colorizer.lua"] = {
-    loaded = true,
-    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua",
-    url = "https://github.com/NvChad/nvim-colorizer.lua"
-  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -170,6 +180,12 @@ _G.packer_plugins = {
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["rose-pine"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/rose-pine",
+    url = "https://github.com/rose-pine/neovim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -185,10 +201,25 @@ _G.packer_plugins = {
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-liquid"] = {
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/vim-liquid",
+    url = "https://github.com/tpope/vim-liquid"
+  },
   ["vim-mix-format"] = {
     loaded = true,
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/vim-mix-format",
     url = "https://github.com/mhinz/vim-mix-format"
+  },
+  ["vim-projectionist"] = {
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/vim-projectionist",
+    url = "https://github.com/tpope/vim-projectionist"
+  },
+  ["vim-projectionist-elixir"] = {
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/vim-projectionist-elixir",
+    url = "https://github.com/andyl/vim-projectionist-elixir"
   },
   ["vim-test"] = {
     loaded = true,
@@ -198,10 +229,14 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: darkplus
-time([[Config for darkplus]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\25colorscheme darkplus\bcmd\bvim\0", "config", "darkplus")
-time([[Config for darkplus]], false)
+-- Config for: glow.nvim
+time([[Config for glow.nvim]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0", "config", "glow.nvim")
+time([[Config for glow.nvim]], false)
+-- Config for: rose-pine
+time([[Config for rose-pine]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")
+time([[Config for rose-pine]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
