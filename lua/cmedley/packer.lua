@@ -81,5 +81,5 @@ use('tpope/vim-projectionist')
 use('c-brenn/fuzzy-projectionist.vim')
 use('andyl/vim-projectionist-elixir')
 
-
+use('ludovicchabant/vim-gutentags')
 end)
