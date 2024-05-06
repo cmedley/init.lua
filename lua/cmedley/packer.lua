@@ -57,21 +57,32 @@ return require('packer').startup(function(use)
  --   	  vim.cmd('colorscheme darkplus')
  --     end
  -- })
+ --
 
- use({
-      'rose-pine/neovim',
-      as = 'rose-pine',
-      config = function()
-    	  vim.cmd('colorscheme rose-pine')
-      end
-  })
 
- --use({
- --     'projekt0n/github-nvim-theme',
- --     config = function()
- --   	  vim.cmd('colorscheme github_dark_dimmed')
- --     end
- -- })
+
+use({ 
+    "catppuccin/nvim", 
+    as = "catppuccin", 
+    config = function() 
+      vim.cmd('colorscheme catppuccin-mocha')
+  end
+})
+
+
+--require("rose-pine").setup({
+--    variant = 'main',
+--    dark_variant = 'main'
+--})
+--
+--use({
+--     'rose-pine/neovim',
+--     as = 'rose-pine',
+--     config = function()
+--   	  vim.cmd('colorscheme rose-pine')
+--     end
+-- })
+
 
  use('APZelos/blamer.nvim')
 
@@ -82,4 +93,5 @@ use('c-brenn/fuzzy-projectionist.vim')
 use('andyl/vim-projectionist-elixir')
 
 use('ludovicchabant/vim-gutentags')
+
 end)
