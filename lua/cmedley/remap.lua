@@ -13,6 +13,15 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
+
+-- FzfLua
+vim.keymap.set('n', '<C-p>', "<cmd>FzfLua files<CR>", { noremap = true, silent = true })
+
+vim.keymap.set('n', '<C-\\>', function()
+   print("Mapping triggered")
+   vim.cmd("FzfLua live_grep")
+end, { noremap = true, silent = true })
+
 -- next greatest remap ever : asbjornHaland
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
@@ -35,3 +44,9 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>rm", vim.cmd.Glow)
+
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true

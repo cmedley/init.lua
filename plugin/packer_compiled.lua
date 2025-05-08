@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?.lua;/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1697887905/share/lua/5.1/?/init.lua;/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?.lua;/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1697887905/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1697887905/lib/lua/5.1/?.so"
+local package_path_str = "/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?.lua;/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1716656478/share/lua/5.1/?/init.lua;/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?.lua;/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1716656478/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/cmedley/.cache/nvim/packer_hererocks/2.1.1716656478/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,6 +74,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["CopilotChat.nvim"] = {
+    config = { "\27LJ\2\nG\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\ndebug\2\nsetup\16CopilotChat\frequire\0" },
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/CopilotChat.nvim",
+    url = "https://github.com/CopilotC-Nvim/CopilotChat.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -130,8 +136,14 @@ _G.packer_plugins = {
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/fuzzy-projectionist.vim",
     url = "https://github.com/c-brenn/fuzzy-projectionist.vim"
   },
+  ["fzf-lua"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ffzf-lua\frequire\0" },
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/fzf-lua",
+    url = "https://github.com/ibhagwan/fzf-lua"
+  },
   ["glow.nvim"] = {
-    config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0" },
+    config = { "\27LJ\2\nH\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\vborder\frounded\nsetup\tglow\frequire\0" },
     loaded = true,
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/glow.nvim",
     url = "https://github.com/ellisonleao/glow.nvim"
@@ -156,6 +168,17 @@ _G.packer_plugins = {
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["none-ls.nvim"] = {
+    config = { "\27LJ\2\nP\0\0\4\1\6\0\t6\0\0\0009\0\1\0009\0\2\0009\0\3\0005\2\4\0-\3\0\0=\3\5\2B\0\2\1K\0\1\0\1À\nbufnr\1\0\1\nbufnr\0\vformat\bbuf\blsp\bvimÓ\2\1\2\b\0\16\0\0309\2\0\0'\4\1\0B\2\2\2\15\0\2\0X\3\23€6\2\2\0009\2\3\0029\2\4\2'\4\5\0005\5\6\0B\2\3\0026\3\2\0009\3\3\0039\3\a\0035\5\b\0=\2\t\5=\1\n\5B\3\2\0016\3\2\0009\3\3\0039\3\v\3'\5\f\0005\6\r\0=\2\t\6=\1\n\0063\a\14\0=\a\15\6B\3\3\0012\0\0€K\0\1\0\rcallback\0\1\0\3\rcallback\0\vbuffer\0\ngroup\0\16BufWritePre\24nvim_create_autocmd\vbuffer\ngroup\1\0\2\vbuffer\0\ngroup\0\24nvim_clear_autocmds\1\0\1\nclear\2\17FormatOnSave\24nvim_create_augroup\bapi\bvim\28textDocument/formatting\20supports_method \1\1\0\6\0\n\0\0156\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\6\0004\4\3\0009\5\3\0009\5\4\0059\5\5\5>\5\1\4=\4\a\0033\4\b\0=\4\t\3B\1\2\1K\0\1\0\14on_attach\0\fsources\1\0\2\14on_attach\0\fsources\0\rprettier\15formatting\rbuiltins\nsetup\fnull-ls\frequire\0" },
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/none-ls.nvim",
+    url = "https://github.com/nvimtools/none-ls.nvim"
+  },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -170,6 +193,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/Users/cmedley/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -240,8 +268,20 @@ try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0!
 time([[Config for catppuccin]], false)
 -- Config for: glow.nvim
 time([[Config for glow.nvim]], true)
-try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tglow\frequire\0", "config", "glow.nvim")
+try_loadstring("\27LJ\2\nH\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\vborder\frounded\nsetup\tglow\frequire\0", "config", "glow.nvim")
 time([[Config for glow.nvim]], false)
+-- Config for: fzf-lua
+time([[Config for fzf-lua]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\ffzf-lua\frequire\0", "config", "fzf-lua")
+time([[Config for fzf-lua]], false)
+-- Config for: CopilotChat.nvim
+time([[Config for CopilotChat.nvim]], true)
+try_loadstring("\27LJ\2\nG\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\ndebug\2\nsetup\16CopilotChat\frequire\0", "config", "CopilotChat.nvim")
+time([[Config for CopilotChat.nvim]], false)
+-- Config for: none-ls.nvim
+time([[Config for none-ls.nvim]], true)
+try_loadstring("\27LJ\2\nP\0\0\4\1\6\0\t6\0\0\0009\0\1\0009\0\2\0009\0\3\0005\2\4\0-\3\0\0=\3\5\2B\0\2\1K\0\1\0\1À\nbufnr\1\0\1\nbufnr\0\vformat\bbuf\blsp\bvimÓ\2\1\2\b\0\16\0\0309\2\0\0'\4\1\0B\2\2\2\15\0\2\0X\3\23€6\2\2\0009\2\3\0029\2\4\2'\4\5\0005\5\6\0B\2\3\0026\3\2\0009\3\3\0039\3\a\0035\5\b\0=\2\t\5=\1\n\5B\3\2\0016\3\2\0009\3\3\0039\3\v\3'\5\f\0005\6\r\0=\2\t\6=\1\n\0063\a\14\0=\a\15\6B\3\3\0012\0\0€K\0\1\0\rcallback\0\1\0\3\rcallback\0\vbuffer\0\ngroup\0\16BufWritePre\24nvim_create_autocmd\vbuffer\ngroup\1\0\2\vbuffer\0\ngroup\0\24nvim_clear_autocmds\1\0\1\nclear\2\17FormatOnSave\24nvim_create_augroup\bapi\bvim\28textDocument/formatting\20supports_method \1\1\0\6\0\n\0\0156\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\6\0004\4\3\0009\5\3\0009\5\4\0059\5\5\5>\5\1\4=\4\a\0033\4\b\0=\4\t\3B\1\2\1K\0\1\0\14on_attach\0\fsources\1\0\2\14on_attach\0\fsources\0\rprettier\15formatting\rbuiltins\nsetup\fnull-ls\frequire\0", "config", "none-ls.nvim")
+time([[Config for none-ls.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

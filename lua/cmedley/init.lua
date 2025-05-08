@@ -11,3 +11,6 @@ vim.g.gutentags_file_list_command = 'git ls-files; git ls-files --others --exclu
 vim.g.gutentags_ctags_exclude = { '*.md' }
 vim.g.gutentags_ctags_tagfile = 'gutentags'
 
+vim.g.copilot_node_command="/Users/cmedley/.asdf/shims/node"
+vim.g.copilot_workspace_folders="/Users/cmedley/Code/optra"
+
